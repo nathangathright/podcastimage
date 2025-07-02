@@ -166,8 +166,8 @@ function getImageType(src) {
 function getXmlTags() {
   const tags = []
   if (squareArt) tags.push(`<podcast:image\n  purpose="artwork"\n  type="${getImageType(squareArt)}"\n  aspect-ratio="1/1"\n  href="${squareArt}"\n/>`)
-  if (landscapeArt) tags.push(`<podcast:image\n  purpose="artwork landscape"\n  type="${getImageType(landscapeArt)}"\n  aspect-ratio="16/9"\n  href="${landscapeArt}"\n/>`)
-  if (portraitArt) tags.push(`<podcast:image\n  purpose="artwork portrait"\n  type="${getImageType(portraitArt)}"\n  aspect-ratio="3/4"\n  href="${portraitArt}"\n/>`)
+  if (landscapeArt) tags.push(`<podcast:image\n  purpose="social"\n  type="${getImageType(landscapeArt)}"\n  aspect-ratio="16/9"\n  href="${landscapeArt}"\n/>`)
+  if (portraitArt) tags.push(`<podcast:image\n  purpose="canvas"\n  type="${getImageType(portraitArt)}"\n  aspect-ratio="3/4"\n  href="${portraitArt}"\n/>`)
   return tags.join('\n\n')
 }
 

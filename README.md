@@ -8,7 +8,7 @@ This tool demonstrates how podcasters can use image tags with purpose tokens to 
 
 ## 🚀 Live Demo
 
-**Try it out:** [nathangathright.github.io/podcastimage/](https://nathangathright.github.io/podcastimages/)
+**Try it out:** [nathangathright.github.io/podcastimage/](https://nathangathright.github.io/podcastimage/)
 
 **Video walkthrough:** [YouTube Demo](https://www.youtube.com/watch?v=5-ntFwX-u_Y)
 

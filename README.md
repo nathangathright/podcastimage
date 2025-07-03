@@ -6,7 +6,9 @@ A sample UI demonstrating the power of the podcast image tag for RSS feeds.
 
 This tool demonstrates how podcasters can use image tags with purpose tokens to provide different image assets for different use cases in podcast apps. Instead of forcing apps to crop or stretch a single square artwork image, podcasters can specify purpose-built images for different contexts.
 
-## 🚀 Demo
+## 🚀 Live Demo
+
+**Try it out:** [nathangathright.github.io/podcastimage/](https://nathangathright.github.io/podcastimage/)
 
 **Video walkthrough:** [YouTube Demo](https://www.youtube.com/watch?v=5-ntFwX-u_Y)
 

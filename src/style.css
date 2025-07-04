@@ -7,10 +7,18 @@
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
 
+  --skeleton-bg: #e0e0e0;
+  --skeleton-text-bg: #f2f2f2;
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.show-page-immersive, .now-playing-immersive {
+  --skeleton-bg: rgba(255, 255, 255, 0.66);
+  --skeleton-text-bg: rgba(255, 255, 255, 0.66);
 }
 
 a {
@@ -73,6 +81,7 @@ button {
   font-weight: 500;
   font-family: inherit;
   background-color: #1a1a1a;
+  color: #fff;
   cursor: pointer;
   transition: border-color 0.25s;
 }
@@ -82,19 +91,6 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
 }
 
 #pintura-preview {
@@ -150,16 +146,16 @@ button:focus-visible {
   place-items: center;
   gap: 2rem;
   padding: 2rem;
-  overflow-y: auto;
+  overflow: auto;
 }
 
 .skeleton-section {
   background: #fff;
   border-radius: 16px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-  min-height: 220px;
   display: flex;
   flex-direction: column;
+  flex-shrink: 0;
   gap: 0;
   overflow: hidden;
   position: relative;
@@ -190,7 +186,7 @@ button:focus-visible {
 .skeleton-title {
   height: 2rem;
   width: 40%;
-  background: #eee;
+  background: var(--skeleton-text-bg);
   border-radius: 8px;
 }
 
@@ -201,9 +197,10 @@ button:focus-visible {
 .skeleton-text {
   height: 1rem;
   width: 80%;
-  background: #f2f2f2;
+  background: var(--skeleton-text-bg);
   border-radius: 6px;
 }
+
 .skeleton-artwork {
   width: 256px;
   height: 256px;
@@ -274,23 +271,6 @@ button:focus-visible {
   margin: 2rem;
 }
 
-@media (max-width: 900px) {
-  #app {
-    flex-direction: column;
-  }
-  .sidebar {
-    width: 100vw;
-    flex-direction: row;
-    gap: 1rem;
-    padding: 1rem;
-    border-right: none;
-    border-bottom: 1px solid #eee;
-  }
-  .main {
-    padding: 1rem;
-  }
-}
-
 /* Now Playing skeleton styles */
 .nowplaying-artwork-row {
   display: flex;
@@ -339,7 +319,7 @@ button:focus-visible {
 .skeleton-progress-bar {
   width: 100%;
   height: 8px;
-  background: linear-gradient(90deg, #e0e0e0 60%, #f2f2f2 100%);
+  background: var(--skeleton-bg);
   border-radius: 4px;
 }
 .nowplaying-progress-labels {
@@ -356,7 +336,7 @@ button:focus-visible {
   gap: 2.5rem;
 }
 .skeleton-btn {
-  background: #e0e0e0;
+  background: var(--skeleton-bg);
   border-radius: 50%;
   display: inline-block;
 }
